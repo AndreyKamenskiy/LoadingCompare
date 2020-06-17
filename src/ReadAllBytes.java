@@ -15,11 +15,6 @@ class ReadAllBytes implements LoadIntArray {
         return numbers;
     }
 
-    @Override
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
     private static int[] getIntArray(String[] in, int from, int to) {
         int[] a = new int[to - from];
 
@@ -27,6 +22,11 @@ class ReadAllBytes implements LoadIntArray {
             a[i] = Integer.parseInt(in[from + i]);
         }
         return a;
+    }
+
+    @Override
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
 }
